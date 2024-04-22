@@ -22,4 +22,35 @@ public class Main {
             System.out.println("Max books reached");
         }
     }
+
+    public static void showHomeScreen() {
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+        do {
+            System.out.println("\nWelcome to Neighborhood Library!");
+            System.out.println("1. Show Available Books");
+            System.out.println("2. Show Checked Out Books");
+            System.out.println("3. Exit");
+
+            System.out.print("Select an option: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    //showAvailableBooks();
+                    break;
+                case 2:
+                    //showCheckedOutBooks();
+                    break;
+                case 3:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+            }
+        } while (!exit);
+
+        System.out.println("Thank you for using Neighborhood Library. Goodbye!");
+    }
 }
